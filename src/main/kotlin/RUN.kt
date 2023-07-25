@@ -1,4 +1,4 @@
-@file:Suppress("UNUSED_EXPRESSION", "IMPLICIT_CAST_TO_ANY")
+@file:Suppress("UNUSED_EXPRESSION", "IMPLICIT_CAST_TO_ANY", "JoinDeclarationAndAssignment")
 
 fun Capital(pais:String): String {
     val capital: String = when (pais) {
@@ -24,9 +24,9 @@ fun main() {
     val pais: String
     println("ATENÇÃO: Este Programa Não Aceita Acentos\n")
     println("qual é seu nome?")
-    val nome = readLine()
+    val nome = readlnOrNull()
     println("Para sair do programa tecle s")
     println("Qual o país da américa do sul que você quer saber a capital ${nome}?")
-    pais = readLine().toString()
+    pais = readlnOrNull().toString()
     println(Capital(pais))
 }
